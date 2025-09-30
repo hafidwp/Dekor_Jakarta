@@ -10,9 +10,9 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
-  <body class="bg-stone-200 scroll-smooth md:scroll-auto">
+  <body class="bg-[#ede9e0] scroll-smooth md:scroll-auto">
     <!-- Navbar Start -->
-    <nav class="bg-[#ede9e0] shadow-sm dark:bg-gray-900">
+    <nav class="bg-[#ede9e0] shadow-sm">
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
@@ -25,7 +25,7 @@
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300"
         >
           <span class="sr-only">Open main menu</span>
           <svg
@@ -46,12 +46,12 @@
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent"
           >
             <li>
               <a
                 href="#home"
-                class="capitalize block py-2 px-3 text-gray-900 hover:text-green-700 bg-[#96a78d] rounded-sm md:bg-transparent md:p-0 dark:text-white md:dark:text-blue-500"
+                class="capitalize block py-2 px-3 text-gray-900 hover:text-green-700 bg-[#96a78d] rounded-sm md:bg-transparent md:p-0"
                 aria-current="page"
                 >home</a
               >
@@ -59,7 +59,7 @@
             <li>
               <a
                 href="#about"
-                class="capitalize block py-2 px-3 text-gray-900 rounded-sm hover:text-green-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="capitalize block py-2 px-3 text-gray-900 rounded-sm hover:text-green-700 md:hover:bg-transparent md:border-0 md:p-0"
                 aria-current="page"
                 >tentang kami</a
               >
@@ -67,7 +67,7 @@
             <li>
               <a
                 href="#services"
-                class="capitalize block py-2 px-3 text-gray-900 rounded-sm hover:text-green-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="capitalize block py-2 px-3 text-gray-900 rounded-sm hover:text-green-700 md:hover:bg-transparent md:border-0 md:p-0"
                 aria-current="page"
                 >layanan</a
               >
@@ -75,7 +75,7 @@
             <li>
               <a
                 href="#pricing"
-                class="capitalize block py-2 px-3 text-gray-900 rounded-sm hover:text-green-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="capitalize block py-2 px-3 text-gray-900 rounded-sm hover:text-green-700 md:hover:bg-transparent md:border-0 md:p-0"
                 aria-current="page"
                 >harga</a
               >
@@ -83,7 +83,7 @@
             <li>
               <a
                 href="#contact"
-                class="capitalize block py-2 px-3 text-gray-900 rounded-sm hover:text-green-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="capitalize block py-2 px-3 text-gray-900 rounded-sm hover:text-green-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
                 aria-current="page"
                 >kontak</a
               >
@@ -273,9 +273,10 @@
             </p>
             <select
               id="categoryFilter"
-              class="px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+              class="px-4 py-2 rounded-lg border-2 border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
             >
-              <option selected value="silver">Silver</option>
+              <option selected value="all">All</option>
+              <option value="silver">Silver</option>
               <option value="gold">Gold</option>
               <option value="ring">Ring</option>
               <option value="backdrop">Backdrop</option>
@@ -443,6 +444,7 @@
               </a>
             </div>
           </div>
+
           <!-- Card Items7 -->
           <div
             class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
@@ -720,32 +722,184 @@
             </div>
           </div>
         </div>
+        <div class="flex justify-center items-center text-center mt-6">
+          <button
+            id="loadMoreBtn"
+            class="hidden px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
+          >
+            Load More
+          </button>
+        </div>
       </div>
     </section>
     <!-- Section layanan End -->
 
+    <!-- Section Why Choose Start -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-4">
+          Mengapa Memilih Kami?
+        </h2>
+        <p class="text-lg text-gray-600 mb-12">
+          Kami memberikan layanan dekorasi pernikahan dengan kualitas terbaik,
+          harga transparan, serta tim profesional yang siap mewujudkan acara
+          impian Anda.
+        </p>
+
+        <!-- Grid 4 kelebihan -->
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Kelebihan 1 -->
+          <div
+            class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition"
+          >
+            <div class="flex justify-center mb-4">
+              <svg
+                class="w-12 h-12 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 8v4l3 3"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Tepat Waktu</h3>
+            <p class="mt-2 text-gray-600">
+              Kami selalu mengutamakan ketepatan waktu dalam persiapan dan
+              eksekusi acara.
+            </p>
+          </div>
+
+          <!-- Kelebihan 2 -->
+          <div
+            class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition"
+          >
+            <div class="flex justify-center mb-4">
+              <svg
+                class="w-12 h-12 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M9 12l2 2l4 -4"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">
+              Harga Transparan
+            </h3>
+            <p class="mt-2 text-gray-600">
+              Tanpa biaya tersembunyi, semua harga sesuai paket yang telah
+              disepakati.
+            </p>
+          </div>
+
+          <!-- Kelebihan 3 -->
+          <div
+            class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition"
+          >
+            <div class="flex justify-center mb-4">
+              <svg
+                class="w-12 h-12 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2l4 8h-8l4 8"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Dekorasi Elegan</h3>
+            <p class="mt-2 text-gray-600">
+              Konsep modern dan elegan yang disesuaikan dengan tema pernikahan
+              Anda.
+            </p>
+          </div>
+
+          <!-- Kelebihan 4 -->
+          <div
+            class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition"
+          >
+            <div class="flex justify-center mb-4">
+              <svg
+                class="w-12 h-12 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 8c-1.657 0-3 1.343-3 3v1c0 1.105.895 2 2 2h2c1.105 0 2-.895 2-2v-1c0-1.657-1.343-3-3-3z"
+                ></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Tim Profesional</h3>
+            <p class="mt-2 text-gray-600">
+              Dikerjakan oleh tim berpengalaman yang berkomitmen untuk kepuasan
+              Anda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Why Choose End -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script>
-      // ambil dropdown
-      const categoryFilter = document.getElementById("categoryFilter");
-
-      // ambil semua card
+      const filter = document.getElementById("categoryFilter");
       const cards = document.querySelectorAll("[data-category]");
+      const loadMoreBtn = document.getElementById("loadMoreBtn");
+      let visibleCards = 6; // jumlah card yang ditampilkan pertama kali
 
-      // event ketika dropdown berubah
-      categoryFilter.addEventListener("change", function () {
-        const selected = this.value;
+      function filterCards() {
+        const selected = filter.value;
+        let count = 0;
 
         cards.forEach((card) => {
-          const cardCategory = card.getAttribute("data-category");
+          const category = card.getAttribute("data-category");
 
-          if (selected === "all" || cardCategory === selected) {
-            card.style.display = "block"; // tampilkan
+          // cocokkan filter
+          if (selected === "all" || category === selected) {
+            if (count < visibleCards) {
+              card.style.display = "block"; // tampilkan card
+            } else {
+              card.style.display = "none"; // sembunyikan card ke-7 dst
+            }
+            count++;
           } else {
-            card.style.display = "none"; // sembunyikan
+            card.style.display = "none"; // tidak sesuai kategori
           }
         });
+
+        // kalau ada lebih dari visibleCards, munculkan tombol
+        const totalVisible = Array.from(cards).filter(
+          (card) => card.style.display !== "none"
+        ).length;
+
+        if (count > visibleCards && totalVisible === visibleCards) {
+          loadMoreBtn.classList.remove("hidden");
+        } else {
+          loadMoreBtn.classList.add("hidden");
+        }
+      }
+
+      // event filter berubah
+      filter.addEventListener("change", () => {
+        visibleCards = 6; // reset kembali ke 6 saat ganti filter
+        filterCards();
       });
+
+      // event tombol Load More
+      loadMoreBtn.addEventListener("click", () => {
+        visibleCards += 6; // tambahkan 6 card lagi
+        filterCards();
+      });
+
+      // jalankan pertama kali
+      filterCards();
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
